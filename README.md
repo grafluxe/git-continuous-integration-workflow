@@ -123,7 +123,7 @@ Remove outdated short term branches as needed (from local and remote). Ever so o
 
 Let's say a month into a project, you have to review a feature you added many weeks ago (feature SE-3485 in the below sample repo). At this point your feature branch is gone, so you need to look in master. If you used the `no-ff` flag when merging, you can easily find the commit in your history.
 
-```
+```bash
 > project (master) $ git log --oneline
 
 407b938 Refactor preamble
@@ -135,7 +135,7 @@ gx5p5r6 Merge branch 'feat/SE-3485'
 :
 ```
 or
-```
+```bash
 > project (master) $ git log --grep=feat/SE-3485
 
 commit gx5p5r6e57018f7be9083f36b3b5f3c0f072e062
@@ -149,7 +149,7 @@ Date:   Thu Feb 16 12:51:45 2017 -0500
 
 If you didn't force a merge commit with the `no-ff` flag (and a fast-forward merge occurred), you'll have to spend much more time to figure out which commits are related to your feature.
 
-```
+```bash
 > project (master) $ git log --oneline
 
 407b938 Refactor preamble
