@@ -26,18 +26,7 @@ Use these tips to make your history as useful as possible:
 
 ## Flow
 
-```
-        master  ------o--------------------------------------------------o--------->
-                       \------.                                         ^
-                        \      \                                       /
-   integration  ---------\------\--------------------o---------o------/------------>
-                          \      \                  ^         ^      /
-                           \      v                /         /------'
-feature/hotfix              \      o----o---------/---------o
-                             \                   /
-                              v                 /
-feature/hotfix                 o----o-----o----o
-```
+![Flow Diagram](flow.png)
 
 1. Checkout feature/hotfix branch from master.
 2. Work on feature/hotfix branch as needed.
