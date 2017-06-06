@@ -51,16 +51,15 @@ This branch represents production ready code and should always be deployable.
 
 ### Integration Branch
 
-Commits to this branch are to be sent to a testing server (preferably with a CI tool automating it).
+This branch is used for testing and preventing conflicts when integrating multiple feature/hotfix branches.
 
 - This is a long lived branch.
 - It represents testing/staging code.
-  - It may contain partially implemented code (as it is used for integrating multiple branches and testing before green lighting a feature/hotfix).
+  - It may contain partially implemented code.
   - **No** branches should be checked out from here.
   - **No** work should be done on this branch.
   - **Never** merge into master from here.
-- If your team includes more than one developer, this branch is required.
-  - It is used to avoid conflicts when testing against multiple feature/hotfix merges.
+- Commits to it should be deployed to your testing environment.
 
 ### Feature and Hotfix Branches
 
