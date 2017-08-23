@@ -4,6 +4,27 @@ This workflow is tightly based on the "feature branch workflow" model and pragma
 
 This document is useful to help teams align around a unified workflow for projects of all sizes. It assumes that you're already familiar with git.
 
+## Contents
+
+- [Git History](#git-history)
+- [Flow](#flow)
+- [Branches](#branches)
+  - [Master Branch](#master-branch)
+  - [Integration Branch](#integration-branch)
+  - [Feature and Hotfix Branches](#feature-and-hotfix-branches)
+- [Conventions](#conventions)
+  - [Tags](#tags)
+    - [Semantic Versioning](#semantic-versioning)
+  - [Branch Naming](#branch-naming)
+  - [Commit Messages](#commit-messages)
+- [Clean Up](#clean-up)
+- [Why You Should Use Non fast-forward Merge Commits to Master](#why-you-should-use-non-fast-forward-merge-commits-to-master)
+- [Helper Scripts + Configs](#helper-scripts--configs)
+- [Improvements](#improvements)
+- [Further Reading](#further-reading)
+- [Notes on Continuous Integration](#notes-on-continuous-integration)
+  - [Why Not Have the CI Tool Auto Build Off the HEAD of Master?](#why-not-have-the-ci-tool-auto-build-off-the-head-of-master)
+
 ## Git History
 
 Your git history is there to help you. The goal is to not only have granular access to your revisions, but to have a clean and organized history of your work.
