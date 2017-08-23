@@ -160,6 +160,17 @@ b43e905 Resolve token error
 
 The `no-ff` flag shouldn't necessarily be used for every merge, but should be for ones you want to mark a point in history for. I find it's valuable to mark in history the inclusion of most features and hotfixes.
 
+## Helper Scripts + Configs
+
+If using git via a CLI, definitely add the completion and prompt scripts found [here](https://github.com/git/git/tree/master/contrib/completion).
+
+If using vim as your commit message editor, you can find some useful vim configs [here](https://gist.github.com/Grafluxe/0197651c07b1a83b0cdba07a42b364ee).
+
+If you find yourself constantly switching between projects via Bash, [this tool](https://github.com/Grafluxe/to.sh) will improve your workflow.
+
+My Bash profile can be found [here](https://gist.github.com/Grafluxe/0cbb0ef51151dc47ff04b4bc4f6cce3b).
+
+
 ## Improvements
 
 If I missed an important detail or you want to propose a workflow improvement, feel free to message me or send over a PR.
