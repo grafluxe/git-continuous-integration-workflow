@@ -19,6 +19,7 @@ This document is useful to help teams align around a unified workflow for projec
   - [Commit Messages](#commit-messages)
 - [Clean Up](#clean-up)
 - [Why You Should Use Non fast-forward Merge Commits to Master](#why-you-should-use-non-fast-forward-merge-commits-to-master)
+- [Gatekeeper](#gatekeeper)
 - [Helper Scripts + Configs](#helper-scripts--configs)
 - [Further Reading](#further-reading)
 - [Notes on Continuous Delivery](#notes-on-continuous-delivery)
@@ -178,6 +179,10 @@ b43e905 Resolve token error
 ```
 
 The `no-ff` flag shouldn't necessarily be used for every merge, but should be for ones you want to mark a point in history for. I find it's valuable to mark in history the inclusion of most features and hotfixes.
+
+## Gatekeeper
+
+Since we have no gatekeeper for master (someone who is solely responsible for merging to master), we rely on each developer to merge their own branch (to master) once it passes testing on the integration branch. Once your codebase is ready to be released for public consumption, your commit should be tagged with the expected semantic version.
 
 ## Helper Scripts + Configs
 
