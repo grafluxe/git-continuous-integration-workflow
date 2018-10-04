@@ -2,7 +2,7 @@
 
 This workflow is tightly based on the "feature branch workflow" model and pragmatic Continuous Integration practices. It's written as an overview of principles and does not rely on specific CI tools or third party applications.
 
-This document is useful to help teams align around a unified workflow for projects of all sizes. It assumes that you're already familiar with git.
+This document is useful to help teams align around a unified workflow for projects of all sizes. It assumes that you're already familiar with Git.
 
 ## Contents
 
@@ -26,7 +26,7 @@ This document is useful to help teams align around a unified workflow for projec
 
 ## Git History
 
-Your git history is there to help you. The goal is to not only have granular access to your revisions, but to have a clean and organized history of your work.
+Your Git history is there to help you. The goal is to not only have granular access to your revisions, but to have a clean and organized history of your work.
 
 Use these tips to make your history as useful as possible:
 
@@ -74,7 +74,7 @@ This branch represents production ready code and should always be deployable.
 This branch is used for testing and preventing conflicts when integrating multiple feature/hotfix branches.
 
 - This is a long lived branch.
-- It represents testing/staging code.
+- It represents code that has yet to pass QA testing.
   - It may contain partially implemented code.
   - **No** branches should be checked out from here.
   - **No** work should be done on this branch.
@@ -115,7 +115,7 @@ Version numbers are defined as MAJOR.MINOR.PATCH.
 
 ### Branch Naming
 
-Your branches should either be feature or hotfix branches. Begin each feature branch with a "feat/" keyword and each hotfix branch with a "fix/" keyword. After the slash, define the feature/hotfix in a short and descriptive manner (using kebab-case instead of whitespace). If your feature/hotfix references a story/ticket in an agile board (i.e. Trello, JIRA), you can use that id instead of a description.
+Your branches should either be feature or hotfix branches. Begin each feature branch with a "feat/" keyword and each hotfix branch with a "fix/" keyword. After the slash, define the feature/hotfix in a short and descriptive manner (using kebab-case instead of whitespace). If your feature/hotfix references a story/ticket in an agile board (i.e. Trello, Jira), you can use that id instead of a description.
 
 Examples:
 
@@ -186,7 +186,7 @@ Since we have no gatekeeper for master (someone who is solely responsible for me
 
 ## Helper Scripts + Configs
 
-If using git via a CLI, definitely add the completion and prompt scripts found [here](https://github.com/git/git/tree/master/contrib/completion).
+If using Git via a CLI, definitely add the completion and prompt scripts found [here](https://github.com/git/git/tree/master/contrib/completion).
 
 If using vim as your commit message editor, you can find some useful vim configs [here](https://gist.github.com/Grafluxe/0197651c07b1a83b0cdba07a42b364ee).
 
