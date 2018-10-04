@@ -1,8 +1,10 @@
 # Git Continuous Integration Workflow
 
-This workflow is tightly based on the "feature branch workflow" model and pragmatic Continuous Integration practices. It's written as an overview of principles and does not rely on specific CI tools or third party applications.
+This workflow is tightly based on the "feature branch workflow" model and pragmatic Continuous Integration practices.
+It's written as an overview of principles and does not rely on specific CI tools or third party applications.
 
-This document is useful to help teams align around a unified workflow for projects of all sizes. It assumes that you're already familiar with Git.
+This document is useful to help teams align around a unified workflow for projects of all sizes. It assumes that you're
+already familiar with Git.
 
 ## Contents
 
@@ -26,12 +28,14 @@ This document is useful to help teams align around a unified workflow for projec
 
 ## Git History
 
-Your Git history is there to help you. The goal is to not only have granular access to your revisions, but to have a clean and organized history of your work.
+Your Git history is there to help you. The goal is to not only have granular access to your revisions, but to have a
+clean and organized history of your work.
 
 Use these tips to make your history as useful as possible:
 
 - Use merge commits when it adds clarity; omit them when they don't.
-  - If you don't need to mark in history the work you did on a temporary branch, consider using `git rebase` before merging to master.
+  - If you don't need to mark in history the work you did on a temporary branch, consider using `git rebase` before
+    merging to master.
 - Keep your history ordered logically. A properly ordered history makes for better use.
   - If change X depends on change Y, commit X should come before Y.
 - Commit early and often.
@@ -65,8 +69,11 @@ This branch represents production ready code and should always be deployable.
 - **All** feature branches should be checked out from here.
 - **No** work should be done on this branch.
   - You shouldn't commit to master; only merge from a feature/hotfix branch.
-- To keep your repository history informative and easy to review, I recommend you  use non fast-forward merge commits (`git merge --no-ff`) when incorporating feature/hotfix branches.
-  - Since feature/hotfix branches are temporary (not long lived), using a [non fast-forward merge commit to master](#why-you-should-use-non-fast-forward-merge-commits-to-master) makes it easy to review history in order to find out when logic was put into production.
+- To keep your repository history informative and easy to review, I recommend you  use non fast-forward merge commits
+  (`git merge --no-ff`) when incorporating feature/hotfix branches.
+  - Since feature/hotfix branches are temporary (not long lived), using a
+    [non fast-forward merge commit to master](#why-you-should-use-non-fast-forward-merge-commits-to-master) makes it
+    easy to review history in order to find out when logic was put into production.
 - Use annotated [tags](#tags) to mark release versions.
 
 ### Integration Branch
@@ -92,7 +99,8 @@ These branches are where work is done on a project (whether as a feature or hotf
   - Don't rewrite history on remote branches.
 - If you're working on a feature/hotfix for more than a day, consider pushing it to remote.
 - If your branch is many commits apart from master, rebase.
-- If you're working on a branch with a teammate, consider using `git pull --rebase`, so to not pollute your history with unneeded merge commits.
+- If you're working on a branch with a teammate, consider using `git pull --rebase`, so to not pollute your history with
+  unneeded merge commits.
 
 ## Conventions
 
@@ -115,7 +123,10 @@ Version numbers are defined as MAJOR.MINOR.PATCH.
 
 ### Branch Naming
 
-Your branches should either be feature or hotfix branches. Begin each feature branch with a "feat/" keyword and each hotfix branch with a "fix/" keyword. After the slash, define the feature/hotfix in a short and descriptive manner (using kebab-case instead of whitespace). If your feature/hotfix references a story/ticket in an agile board (i.e. Trello, Jira), you can use that id instead of a description.
+Your branches should either be feature or hotfix branches. Begin each feature branch with a "feat/" keyword and each
+hotfix branch with a "fix/" keyword. After the slash, define the feature/hotfix in a short and descriptive manner (using
+kebab-case instead of whitespace). If your feature/hotfix references a story/ticket in an agile board (i.e. Trello,
+Jira), you can use that id instead of a description.
 
 Examples:
 
@@ -136,11 +147,14 @@ Examples:
 
 ## Clean Up
 
-Remove outdated short term branches as needed (from local and remote). Ever so often, run maintenance tasks such as [git-gc](https://git-scm.com/docs/git-gc).
+Remove outdated short term branches as needed (from local and remote). Ever so often, run maintenance tasks such as
+[git-gc](https://git-scm.com/docs/git-gc).
 
 ## Why You Should Use Non fast-forward Merge Commits to Master
 
-Let's say a month into a project, you have to review a feature you added many weeks ago (feature SE-3485 in the below sample repo). At this point your feature branch is gone, so you need to look in master. If you used the `no-ff` flag when merging, you can easily find the commit in your history.
+Let's say a month into a project, you have to review a feature you added many weeks ago (feature SE-3485 in the below
+sample repo). At this point your feature branch is gone, so you need to look in master. If you used the `no-ff` flag
+when merging, you can easily find the commit in your history.
 
 ```bash
 > project (master) $ git log --oneline
@@ -166,7 +180,8 @@ Date:   Thu Feb 16 12:51:45 2017 -0500
 
 ```
 
-If you didn't force a merge commit with the `no-ff` flag (and a fast-forward merge occurred), you'll have to spend much more time to figure out which commits are related to your feature.
+If you didn't force a merge commit with the `no-ff` flag (and a fast-forward merge occurred), you'll have to spend much
+more time to figure out which commits are related to your feature.
 
 ```bash
 > project (master) $ git log --oneline
@@ -178,19 +193,25 @@ b43e905 Resolve token error
 :
 ```
 
-The `no-ff` flag shouldn't necessarily be used for every merge, but should be for ones you want to mark a point in history for. I find it's valuable to mark in history the inclusion of most features and hotfixes.
+The `no-ff` flag shouldn't necessarily be used for every merge, but should be for ones you want to mark a point in
+history for. I find it's valuable to mark in history the inclusion of most features and hotfixes.
 
 ## Gatekeeper
 
-Since we have no gatekeeper for master (someone who is solely responsible for merging to master), we rely on each developer to merge their own branch (to master) once it passes testing on the integration branch. Once your codebase is ready to be released for public consumption, your commit should be tagged with the expected semantic version.
+Since we have no gatekeeper for master (someone who is solely responsible for merging to master), we rely on each
+developer to merge their own branch (to master) once it passes testing on the integration branch. Once your codebase is
+ready to be released for public consumption, your commit should be tagged with the expected semantic version.
 
 ## Helper Scripts + Configs
 
-If using Git via a CLI, definitely add the completion and prompt scripts found [here](https://github.com/git/git/tree/master/contrib/completion).
+If using Git via a CLI, definitely add the completion and prompt scripts found
+[here](https://github.com/git/git/tree/master/contrib/completion).
 
-If using vim as your commit message editor, you can find some useful vim configs [here](https://gist.github.com/Grafluxe/0197651c07b1a83b0cdba07a42b364ee).
+If using vim as your commit message editor, you can find some useful vim configs
+[here](https://gist.github.com/Grafluxe/0197651c07b1a83b0cdba07a42b364ee).
 
-If you find yourself constantly switching between projects via Bash, [this tool](https://github.com/Grafluxe/to.sh) will improve your workflow.
+If you find yourself constantly switching between projects via Bash, [this tool](https://github.com/Grafluxe/to.sh) will
+improve your workflow.
 
 My Bash profile can be found [here](https://gist.github.com/Grafluxe/0cbb0ef51151dc47ff04b4bc4f6cce3b).
 
