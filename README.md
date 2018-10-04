@@ -22,7 +22,6 @@ This document is useful to help teams align around a unified workflow for projec
 - [Helper Scripts + Configs](#helper-scripts--configs)
 - [Further Reading](#further-reading)
 - [Notes on Continuous Integration](#notes-on-continuous-integration)
-  - [Why Not Have the CI Tool Auto Build Off the HEAD of Master?](#why-not-have-the-ci-tool-auto-build-off-the-head-of-master)
 
 ## Git History
 
@@ -213,7 +212,3 @@ Here's a simplified rundown of how to setup a CI tool to align with this workflo
 - The master branch should trigger a build to PROD based on the **latest tagged commit**.
 - The integration branch should trigger a build to TEST (or STAG) based on the **latest commit**.
 - Feature/hotfix branches should not be tracked.
-
-### Why Not Have the CI Tool Auto Build Off the HEAD of Master?
-
-Since we have no gatekeeper for master (someone who is solely responsible for merging to master), we rely on each developer to merge their own branch once it passes testing on the integration branch. To prevent any issue that could be caused by someone accidentally committing to master — which shouldn't be done and could potentially introduce bugs to production code — we add the extra step of having to tag a version before any deployment takes place. In any case, version tagging should happen in order to properly mark releases. Note that while we can add hooks to mitigate this use case, this document aims to be a low level entry to creating a useful workflow (which is why CI tools and hooks are excluded).
