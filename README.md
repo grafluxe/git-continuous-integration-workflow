@@ -20,7 +20,7 @@ already familiar with Git.
   - [Branch Naming](#branch-naming)
   - [Commit Messages](#commit-messages)
 - [Clean Up](#clean-up)
-- [Why You Should Use Non fast-forward Merge Commits to Master](#why-you-should-use-non-fast-forward-merge-commits-to-master)
+- [Use Non fast-forward Merge Commits to Master](#use-non-fast-forward-merge-commits-to-master)
 - [Gatekeeper](#gatekeeper)
 - [Helper Scripts + Configs](#helper-scripts--configs)
 - [Further Reading](#further-reading)
@@ -72,7 +72,7 @@ This branch represents production ready code and should always be deployable.
 - To keep your repository history informative and easy to review, I recommend you  use non fast-forward merge commits
   (`git merge --no-ff`) when incorporating feature/hotfix branches.
   - Since feature/hotfix branches are temporary (not long lived), using a
-    [non fast-forward merge commit to master](#why-you-should-use-non-fast-forward-merge-commits-to-master) makes it
+    [non fast-forward merge commit to master](#use-non-fast-forward-merge-commits-to-master) makes it
     easy to review history in order to find out when logic was put into production.
 - Use annotated [tags](#tags) to mark release versions.
 
@@ -150,7 +150,7 @@ Examples:
 Remove outdated short term branches as needed (from local and remote). Ever so often, run maintenance tasks such as
 [git-gc](https://git-scm.com/docs/git-gc).
 
-## Why You Should Use Non fast-forward Merge Commits to Master
+## Use Non fast-forward Merge Commits to Master
 
 Let's say a month into a project, you have to review a feature you added many weeks ago (feature SE-3485 in the below
 sample repo). At this point your feature branch is gone, so you need to look in master. If you used the `no-ff` flag
