@@ -20,7 +20,6 @@ This document is useful to help teams align around a unified workflow for projec
 - [Clean Up](#clean-up)
 - [Why You Should Use Non fast-forward Merge Commits to Master](#why-you-should-use-non-fast-forward-merge-commits-to-master)
 - [Helper Scripts + Configs](#helper-scripts--configs)
-- [Improvements](#improvements)
 - [Further Reading](#further-reading)
 - [Notes on Continuous Integration](#notes-on-continuous-integration)
   - [Why Not Have the CI Tool Auto Build Off the HEAD of Master?](#why-not-have-the-ci-tool-auto-build-off-the-head-of-master)
@@ -190,11 +189,6 @@ If using vim as your commit message editor, you can find some useful vim configs
 If you find yourself constantly switching between projects via Bash, [this tool](https://github.com/Grafluxe/to.sh) will improve your workflow.
 
 My Bash profile can be found [here](https://gist.github.com/Grafluxe/0cbb0ef51151dc47ff04b4bc4f6cce3b).
-
-
-## Improvements
-
-If I missed an important detail or you want to propose a workflow improvement, feel free to message me or send over a PR.
 
 ## Further Reading
 
