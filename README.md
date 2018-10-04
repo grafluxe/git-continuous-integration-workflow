@@ -21,7 +21,7 @@ This document is useful to help teams align around a unified workflow for projec
 - [Why You Should Use Non fast-forward Merge Commits to Master](#why-you-should-use-non-fast-forward-merge-commits-to-master)
 - [Helper Scripts + Configs](#helper-scripts--configs)
 - [Further Reading](#further-reading)
-- [Notes on Continuous Integration](#notes-on-continuous-integration)
+- [Notes on Continuous Delivery](#notes-on-continuous-delivery)
 
 ## Git History
 
@@ -205,10 +205,13 @@ My Bash profile can be found [here](https://gist.github.com/Grafluxe/0cbb0ef5115
 
 ***
 
-## Notes on Continuous Integration
+## Notes on Continuous Delivery
 
-Here's a simplified rundown of how to setup a CI tool to align with this workflow:
+Here's a simplified rundown of how to setup a CD tool to align with this workflow:
 
 - The master branch should trigger a build to PROD based on the **latest tagged commit**.
-- The integration branch should trigger a build to TEST (or STAG) based on the **latest commit**.
+  - It should also trigger a build to STAG on the **latest commit**.
+- The integration branch should trigger a build to TEST based on the **latest commit**.
 - Feature/hotfix branches should not be tracked.
+
+Read my document on [Continuous Delivery](https://github.com/grafluxe/continuous-delivery-pipeline#readme).
