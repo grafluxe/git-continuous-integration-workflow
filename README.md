@@ -1,4 +1,4 @@
-# Git Workflow
+# Git Continuous Integration Workflow
 
 This workflow is tightly based on the "feature branch workflow" model and pragmatic Continuous Integration practices. It's written as an overview of principles and does not rely on specific CI tools or third party applications.
 
