@@ -1,7 +1,9 @@
 # Git Continuous Integration Workflow
 
-This workflow is tightly based on the "feature branch workflow" model and pragmatic Continuous Integration practices.
-It's written as an overview of principles and does not rely on specific CI tools or third party applications.
+This workflow focuses mainly on Git and is tightly based on the
+[Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) model and
+pragmatic Continuous Integration practices. It's written as an overview of principles and does not rely on specific
+CI/CD tools or additional third party applications.
 
 This document is useful to help teams align around a unified workflow for projects of all sizes. It assumes that you're
 already familiar with Git.
